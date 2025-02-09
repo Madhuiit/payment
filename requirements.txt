@@ -93,11 +93,11 @@ QtPy==2.2.1
 render-cli==0.2.1
 requests==2.32.3
 rich==12.6.0
-scikit-learn==1.1.2
+# scikit-learn==1.1.2
 scipy==1.9.2
 Send2Trash==1.8.0
 six==1.16.0
-sklearn==0.0
+# sklearn==0.0
 soupsieve==2.3.2.post1
 SQLAlchemy==2.0.30
 stack-data==0.5.1
