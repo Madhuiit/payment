@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard - Village Case & Payment System</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <div class="container">
     <h1>Dashboard</h1>
-    <p>Please Cancel the request after the transaction to avoid unwanted Call</p>
-    
+    <p>Find users based on their requests.</p>
+
     <table>
       <thead>
         <tr>
@@ -26,7 +26,13 @@
           <td>{{ request.name }}</td>
           <td class="contact">{{ request.contact }}</td>
           <td>{{ request.type }}</td>
-          <td><button class="cancel-btn">Cancel Request</button></td>
+          <td>
+            {% if request.contact == user_contact %}
+              <button class="cancel-btn">Cancel Request</button>
+            {% else %}
+              <span class="disabled-btn">Not Allowed</span>
+            {% endif %}
+          </td>
         </tr>
         {% endfor %}
       </tbody>
