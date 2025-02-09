@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Container */
+.container {
+  width: 80%;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading */
+h1 {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #007bff;
+  color: white;
+  text-transform: uppercase;
+}
+
+td {
+  background: #f9f9f9;
+}
+
+tr:hover {
+  background: #f1f1f1;
+  transition: 0.3s;
+}
+
+/* Contact Number Styling (No Flashing) */
+.contact {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #dc3545;
+}
+
+/* Button Styling */
+button, .btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+button:hover, .btn:hover {
+  background: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}

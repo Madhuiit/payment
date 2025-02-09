@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Village Case & Payment System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Dashboard</h1>
+    <p>Please Cancel the request after the transaction to avoid unwanted Call</p>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Contact</th>
+          <th>Request Type</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for request in requests %}
+        <tr data-name="{{ request.name }}" data-contact="{{ request.contact }}" data-type="{{ request.type }}">
+          <td>{{ request.name }}</td>
+          <td class="contact">{{ request.contact }}</td>
+          <td>{{ request.type }}</td>
+          <td><button class="cancel-btn">Cancel Request</button></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    
+    <a href="/" class="btn">Submit Another Request</a>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
