@@ -1,12 +1,10 @@
 [
   {
-    "name": "Madhu sudan ",
+    "name": "krish",
+    "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
     "contact": "9352332912",
-    "type": "case"
-  },
-  {
-    "name": "Madhu sudan pandia",
-    "contact": "9352332912",
+    "location": "pulasar",
+    "amount": 5000,
     "type": "payment"
   }
 ]

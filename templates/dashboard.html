@@ -9,36 +9,53 @@
 <body>
   <div class="container">
     <h1>Dashboard</h1>
-    <p>Find users based on their requests.</p>
+
+    <div class="filters">
+      <input type="text" id="filterLocation" placeholder="Filter by Location">
+      <select id="filterType">
+        <option value="">All Types</option>
+        <option value="case">Case Assistance</option>
+        <option value="payment">Online Payment</option>
+      </select>
+      <input type="number" id="minAmount" placeholder="Min Amount">
+      <input type="number" id="maxAmount" placeholder="Max Amount">
+      <button id="filterButton">Apply Filters</button>
+    </div>
 
     <table>
       <thead>
         <tr>
           <th>Name</th>
           <th>Contact</th>
+          <th>Location</th>
+          <th>Money Requested</th>
           <th>Request Type</th>
           <th>Action</th>
         </tr>
       </thead>
-      <tbody>
-        {% for request in requests %}
-        <tr data-name="{{ request.name }}" data-contact="{{ request.contact }}" data-type="{{ request.type }}">
-          <td>{{ request.name }}</td>
-          <td class="contact">{{ request.contact }}</td>
-          <td>{{ request.type }}</td>
-          <td>
-            {% if request.contact == user_contact %}
-              <button class="cancel-btn">Cancel Request</button>
-            {% else %}
-              <span class="disabled-btn">Not Allowed</span>
-            {% endif %}
-          </td>
-        </tr>
-        {% endfor %}
+      <tbody id="requestTable">
+        {% if requests %}
+          {% for request in requests %}
+          <tr data-name="{{ request.name }}" data-contact="{{ request.contact }}" data-location="{{ request.location }}" data-amount="{{ request.amount }}" data-type="{{ request.type }}">
+            <td>{{ request.name }}</td>
+            <td>{{ request.contact }}</td>
+            <td>{{ request.location }}</td>
+            <td>{{ request.amount }}</td>
+            <td>{{ request.type }}</td>
+            <td>
+              {% if request.password == user_password %}
+                <button class="cancel-btn" data-name="{{ request.name }}" data-password="{{ request.password }}">Cancel</button>
+              {% else %}
+                <span class="disabled-btn">Not Allowed</span>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        {% else %}
+          <tr><td colspan="6" style="text-align: center;">No requests found</td></tr>
+        {% endif %}
       </tbody>
     </table>
-    
-    <a href="/" class="btn">Submit Another Request</a>
   </div>
 
   <script src="{{ url_for('static', filename='script.js') }}"></script>
