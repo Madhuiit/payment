@@ -5,6 +5,46 @@
     "contact": "9352332912",
     "location": "pulasar",
     "amount": 5000,
-    "type": "payment"
+    "type": "upi"
+  },
+  {
+    "name": "ram",
+    "password": "a631f4488a457da27b4a64dc8f2d85085b50ff568be99125cf6f8f45c759878e",
+    "contact": "9352332912",
+    "location": "pulasar",
+    "amount": 2000,
+    "type": "cash"
+  },
+  {
+    "name": "bhago",
+    "password": "8ccf3d77714eb180523cd8cc28ea9fb9dbf8d0d36c53371869e6133d014dd3f2",
+    "contact": "8107555077",
+    "location": "pulasar",
+    "amount": 40000,
+    "type": "cash"
+  },
+  {
+    "name": "bhagvati",
+    "password": "1e97965a37b929f6a9aa49914381ee50c758ccc4386c70c4d15e0991bc5337c6",
+    "contact": "8107555077",
+    "location": "sardarshar",
+    "amount": 3000,
+    "type": "upi"
+  },
+  {
+    "name": "ram",
+    "password": "af4a400a2ceb7963a424d9cf3779175c8d258facf8a31ee8bc1949dc060e10e6",
+    "contact": "345678978",
+    "location": "sardarshar",
+    "amount": 100,
+    "type": "cash"
+  },
+  {
+    "name": "rupesh",
+    "password": "ae653a0bc76ec51c409bcb90afb4d9255da8ae0db154485b32aa7da1239f51e9",
+    "contact": "56788984844",
+    "location": "kalusar",
+    "amount": 1500,
+    "type": "upi"
   }
 ]
